@@ -247,9 +247,9 @@ class MirrorLeechListener:
         else:
           file_ = f"{file_}"
         if EMOJI_THEME is True:
-            slmsg = f"🗂️ Name: <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
-            slmsg += f"📐 Size: {size}\n"
-            slmsg += f"👥 Added by: {self.tag} | <code>{self.user_id}</code>\n\n"
+            slmsg = f"<b>╭<a href=\"{LEECH_LOG_URL}\">🗂️ Name:</a> </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
+            slmsg += f"├📐 Size: {size}\n"
+            slmsg += f"╰👥 Added by: {self.tag} | <code>{self.user_id}</code>\n\n"
         else:
             slmsg = f"Name: <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
             slmsg += f"Size: {size}\n"
@@ -321,7 +321,7 @@ class MirrorLeechListener:
 
         if BOT_PM and FORCE_BOT_PM and not self.isPrivate:
             if EMOJI_THEME is True:
-                msg = f"<b>🗂️ Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
+                msg = f"<b>╭<a href=\"{LEECH_LOG_URL}\">🗂️ Name:</a> </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
             else:
                 msg = f"<b>Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
             botpm = f"<b>\nHey {self.tag}!, I have sent your stuff in PM.</b>\n"
@@ -344,7 +344,7 @@ class MirrorLeechListener:
                 reply_to.delete()
 
         if EMOJI_THEME is True:
-            msg = f"<b>╭🗂️ Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├📐 Size: </b>{size}"
+            msg = f"<b>╭<a href=\"{LEECH_LOG_URL}\">🗂️ Name:</a> </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├📐 Size: </b>{size}"
         else:
             msg = f"<b>╭ Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├ Size: </b>{size}"
 
@@ -412,8 +412,7 @@ class MirrorLeechListener:
                 msg += f'\n<b>├ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
                 msg += f'\n<b>╰ #Leech_by: </b>{self.tag}\n\n'
 
-
-
+                            
             if not files:
                 if PICS:
                     uploadmsg = sendPhoto(msg, self.bot, self.message, random.choice(PICS), buttons.build_menu(2))
