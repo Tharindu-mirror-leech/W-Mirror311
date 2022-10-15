@@ -280,7 +280,7 @@ def restart(update, context):
             app.process_formation()[po.type].scale(0)
     else:
         LOGGER.info("Normally Restarting.")
-        restart_message = sendMessage("Normally Restarting.", context.bot, update.message)
+        restart_message = sendMessage("😅ℝ𝕖𝕤𝕥𝕒𝕣𝕥𝕚𝕟𝕘...♻️", context.bot, update.message)
         if Interval:
             Interval[0].cancel()
             Interval.clear()
