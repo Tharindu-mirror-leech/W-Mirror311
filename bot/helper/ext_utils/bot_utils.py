@@ -458,10 +458,9 @@ def bot_sys_stats():
                 num_split += 1
     stats = f"""
 🖥️CPU : {cpu}% | 💽RAM : {mem}%
-🔻DL : {num_active} | 🔺UP : {num_upload} | ⚕️SPLIT : {num_split}
-🔐ZIP : {num_archi} | 🔓UNZIP : {num_extract} | ➕️TOTAL : {tasks}
-🧬Limits : T/D : {TORRENT_DIRECT_LIMIT}GB | 🖇️Z/U : {ZIP_UNZIP_LIMIT}GB
-                    🏷️L : {LEECH_LIMIT}GB | ♎️M : {MEGA_LIMIT}GB
+🔻DL : {num_active} | 🔺UP : {num_upload}
+🔐ZIP : {num_archi} |🔓UNZIP : {num_extract}
+➕️TOTAL : {tasks}| ⚕️SPLIT : {num_split}
  🍻𝕄𝕒𝕕𝕖 𝕓𝕪 {CREDIT_NAME}✒️
 """
     return stats
