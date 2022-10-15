@@ -720,9 +720,9 @@ except:
 try:
     CREDIT_NAME = getConfig('CREDIT_NAME')
     if len(CREDIT_NAME) == 0:
-        CREDIT_NAME = 'WeebZone'
+        CREDIT_NAME = '𝕋𝕙𝕒𝕣𝕚𝕟𝕕𝕦'
 except KeyError:
-    CREDIT_NAME = 'WeebZone'
+    CREDIT_NAME = '𝕋𝕙𝕒𝕣𝕚𝕟𝕕𝕦'
 try:
     NAME_FONT = getConfig('NAME_FONT')
     if len(NAME_FONT) == 0:
