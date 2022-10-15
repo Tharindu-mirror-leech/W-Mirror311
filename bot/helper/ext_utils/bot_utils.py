@@ -458,10 +458,12 @@ def bot_sys_stats():
                 num_split += 1
     stats = f"""
 🖥️CPU : {cpu}% | 💽RAM : {mem}%
-🔻DL : {num_active} | 🔺UP : {num_upload}
-🔐ZIP : {num_archi} |🔓UNZIP : {num_extract}
-➕️TOTAL : {tasks}| ⚕️SPLIT : {num_split}
- 🍻𝕄𝕒𝕕𝕖 𝕓𝕪 {CREDIT_NAME}✒️
+   🔻DL : {num_active} | 🔺UP : {num_upload}
+   🔐ZIP : {num_archi} |🔓UNZIP : {num_extract}
+   ➕️TOTAL : {tasks}| ⚕️SPLIT : {num_split}
+  🔻 DL:{get_readable_file_size(dl_speed)}/s |🔺 UL:{get_readable_file_size(up_speed)}/s
+ 
+   🍻𝕄𝕒𝕕𝕖 𝕓𝕪 {CREDIT_NAME}✒️
 """
     return stats
 dispatcher.add_handler(
