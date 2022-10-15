@@ -457,12 +457,12 @@ def bot_sys_stats():
        if stats.status() == MirrorStatus.STATUS_SPLITTING:
                 num_split += 1
     stats = f"""
-CPU : {cpu}% | RAM : {mem}%
-DL : {num_active} | UP : {num_upload} | SPLIT : {num_split}
-ZIP : {num_archi} | UNZIP : {num_extract} | TOTAL : {tasks}
-Limits : T/D : {TORRENT_DIRECT_LIMIT}GB | Z/U : {ZIP_UNZIP_LIMIT}GB
-                    L : {LEECH_LIMIT}GB | M : {MEGA_LIMIT}GB
-Made with ❤️ by {CREDIT_NAME}
+🖥️CPU : {cpu}% | 💽RAM : {mem}%
+🔻DL : {num_active} | 🔺UP : {num_upload} | ⚕️SPLIT : {num_split}
+🔐ZIP : {num_archi} | 🔓UNZIP : {num_extract} | ➕️TOTAL : {tasks}
+🧬Limits : T/D : {TORRENT_DIRECT_LIMIT}GB | 🖇️Z/U : {ZIP_UNZIP_LIMIT}GB
+                    🏷️L : {LEECH_LIMIT}GB | ♎️M : {MEGA_LIMIT}GB
+ 🍻𝕄𝕒𝕕𝕖 𝕓𝕪 {CREDIT_NAME}✒️
 """
     return stats
 dispatcher.add_handler(
