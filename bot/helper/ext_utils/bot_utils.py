@@ -457,12 +457,14 @@ def bot_sys_stats():
        if stats.status() == MirrorStatus.STATUS_SPLITTING:
                 num_split += 1
     stats = f"""
-CPU : {cpu}% | RAM : {mem}%
-DL : {num_active} | UP : {num_upload} | SPLIT : {num_split}
-ZIP : {num_archi} | UNZIP : {num_extract} | TOTAL : {tasks}
-Limits : T/D : {TORRENT_DIRECT_LIMIT}GB | Z/U : {ZIP_UNZIP_LIMIT}GB
-                    L : {LEECH_LIMIT}GB | M : {MEGA_LIMIT}GB
-Made with ❤️ by {CREDIT_NAME}
+𝔹𝕆𝕋 𝕊𝕐𝕊𝕋𝔼𝕄 𝕊𝕋𝔸𝕋𝕊
+🖥️ ℂ𝕡𝕦➮ {progress_bar(cpuUsage)} {cpuUsage}%
+🎮 ℝ𝕒𝕞➮ {progress_bar(mem_p)} {mem_p}%
+💽𝔻𝕚𝕤𝕜➮  {progress_bar(disk)} {disk}%
+ 📦𝕋➮ {disk_t} 🔸 📀𝔽➮ {disk_f}
+⌛️𝕎𝕠𝕣𝕜𝕋𝕚𝕞𝕖➮ {currentTime}
+ 🔽𝕋-𝔻𝕃➮ {recv} 🔸🔼 𝕋-𝕌ℙ➮ {sent}
+🍻♥️𝕄𝕒𝕕𝕖 𝔹𝕪 𝕋𝕙𝕒𝕣𝕚𝕟𝕕𝕦♥️🍻
 """
     return stats
 dispatcher.add_handler(
